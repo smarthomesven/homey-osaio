@@ -16,5 +16,8 @@
   },
   "1.0.5": {
     "en": "Fixed telemetry"
+  },
+  "1.0.6": {
+    "en": "Improved snapshots"
   }
 }
