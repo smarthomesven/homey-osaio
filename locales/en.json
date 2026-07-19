@@ -1,1 +1,6 @@
-{}
+{
+    "pair": {
+        "save": "Save",
+        "saving": "Saving"
+    }
+}
