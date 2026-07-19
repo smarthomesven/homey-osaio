@@ -41,32 +41,31 @@ module.exports = class MyDevice extends Homey.Device {
   async setSnapshot() {
     try {
       this.log('Fetching snapshot for device:', this.getName());
-      const client = this.driver._getAuthedClient();
-      if (!client) {
-        this.log('No authenticated client available');
-        return;
-      }
-      const tz = this.homey.clock.getTimezone();
-      const date = new Date().toLocaleDateString('en-CA', { timeZone: tz });
-      this.log('Fetching snapshot for date:', date);
-      const response = await client.get('/msg/device/all', {
-        params: { 
-          uuids: this.getData().uuid, 
-          date: date,
-          rows: 10,
-          zone: 0.0,
-          direction: 'desc',
-          sort: 1,
-          contain_start_id: 0 },
-      });
-      const respData = response.data;
-      if (respData.code === 1006) {
-        await this.homey.driver.auth();
-        return;
-      }
-      const data = respData.data[0];
-      this.log('Image URL:', data.files);
       this._snapshot.setStream(async (stream) => {
+        const client = this.driver._getAuthedClient();
+        if (!client) {
+          this.log('No authenticated client available');
+          return;
+        }
+        const tz = this.homey.clock.getTimezone();
+        const date = new Date().toLocaleDateString('en-CA', { timeZone: tz });
+        this.log('Fetching snapshot for date:', date);
+        const response = await client.get('/msg/device/all', {
+          params: { 
+            uuids: this.getData().uuid, 
+            date: date,
+            rows: 10,
+            zone: 0.0,
+            direction: 'desc',
+            sort: 1,
+            contain_start_id: 0 },
+        });
+        const respData = response.data;
+        if (respData.code === 1006) {
+          await this.homey.driver.auth();
+          return;
+        }
+        const data = respData.data[0];
         const imageResponse = await axios.get(data.files, {
           responseType: 'stream',
         });

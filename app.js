@@ -2,6 +2,7 @@
 
 const Homey = require('homey');
 const WebSocket = require('ws');
+const axios = require('axios');
 
 const WS_URL = 'wss://ali-wss-eu.osaio.net/ws';
 const APPID = '3dab98eee85b7ae8';
