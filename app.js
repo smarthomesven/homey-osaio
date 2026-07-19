@@ -292,7 +292,7 @@ class OsaioApp extends Homey.App {
       }
       await axios.post('https://homey-apps-telemetry.vercel.app/api/installations', {
         id: id,
-        appId: "nl.androidplanet",
+        appId: "net.osaio",
         homeyPlatform: this.homey.platformVersion ? this.homey.platformVersion : 1,
         appVersion: this.manifest.version,
       }).catch(error => {
