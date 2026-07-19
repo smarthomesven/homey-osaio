@@ -1,0 +1,10 @@
+{
+  "type": "boolean",
+  "title": { 
+    "en": "Refresh image"
+  },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button",
+  "icon": "/assets/refresh.svg"
+}

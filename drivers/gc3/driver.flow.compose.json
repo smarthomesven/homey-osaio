@@ -1,0 +1,10 @@
+{
+    "actions": [
+        {
+            "id": "refresh_snapshot",
+            "title": {
+                "en": "Refresh image"
+            }
+        }
+    ]
+}

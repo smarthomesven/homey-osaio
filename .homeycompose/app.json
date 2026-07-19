@@ -1,0 +1,42 @@
+{
+  "id": "net.osaio",
+  "version": "1.0.0",
+  "compatibility": ">=12.4.0",
+  "sdk": 3,
+  "runtime": "nodejs",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "OSAIO"
+  },
+  "description": {
+    "en": "All your smart devices in one app"
+  },
+  "category": [
+    "security"
+  ],
+  "brandColor": "#FFB200",
+  "source": "https://github.com/smarthomesven/homey-osaio",
+  "bugs": {
+    "url": "https://github.com/smarthomesven/homey-osaio/issues"
+  },
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "tags": {
+    "en": [
+      "gncc",
+      "wolfang",
+      "victure",
+      "surfola"
+    ]
+  },
+  "author": {
+    "name": "Sven Serlier",
+    "email": "sven@dypodex.com"
+  }
+}
