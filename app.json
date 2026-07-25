@@ -48,6 +48,7 @@
         "title": {
           "en": "Refresh image"
         },
+        "deprecated": true,
         "args": [
           {
             "type": "device",
@@ -102,6 +103,50 @@
         }
       ],
       "id": "gc3"
+    },
+    {
+      "name": {
+        "en": "K1Pro"
+      },
+      "class": "camera",
+      "capabilities": [
+        "onoff",
+        "refresh"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/k1pro/assets/images/small.png",
+        "large": "/drivers/k1pro/assets/images/large.png",
+        "xlarge": "/drivers/k1pro/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "notice"
+        },
+        {
+          "id": "login"
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "k1pro"
     }
   ],
   "capabilities": {

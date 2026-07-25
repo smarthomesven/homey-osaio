@@ -30,12 +30,6 @@ module.exports = class MyDevice extends Homey.Device {
       this.log('Refresh capability triggered, fetching new snapshot...');
       await this.setSnapshot();
     });
-    const refreshSnapshotAction = this.homey.flow.getActionCard('refresh_snapshot');
-    refreshSnapshotAction.registerRunListener(async (args, state) => {
-      this.log('Flow action triggered, fetching new snapshot...');
-      await this.setSnapshot();
-      return true;
-    });
   }
 
   async setSnapshot() {
