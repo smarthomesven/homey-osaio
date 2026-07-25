@@ -19,5 +19,8 @@
   },
   "1.0.6": {
     "en": "Improved snapshots"
+  },
+  "1.1.0": {
+    "en": "Added K1Pro and fixed some bugs"
   }
 }
