@@ -28,5 +28,8 @@
   },
   "1.1.2": {
     "en": "Update dependencies"
+  },
+  "1.1.3": {
+    "en": "Improved pairing views"
   }
 }
