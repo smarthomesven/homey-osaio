@@ -31,5 +31,8 @@
   },
   "1.1.3": {
     "en": "Improved pairing views"
+  },
+  "1.1.4": {
+    "en": "Added energy approximations for the GC3"
   }
 }
