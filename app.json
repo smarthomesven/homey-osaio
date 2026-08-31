@@ -72,6 +72,12 @@
       "platforms": [
         "local"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 1.5,
+          "usageOff": 1.5
+        }
+      },
       "connectivity": [
         "cloud"
       ],
