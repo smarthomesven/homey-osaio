@@ -1,0 +1,10 @@
+{
+    "pair": {
+        "password": "Wachtwoord",
+        "save": "Opslaan",
+        "saving": "Opslaan",
+        "failed": "Er is iets misgegaan, heb je het juiste emailadres en wachtwoord ingevoerd?",
+        "noemail": "Voer een emailadres in",
+        "nopassword": "Voer een wachtwoord in"
+    }
+}

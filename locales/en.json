@@ -1,6 +1,10 @@
 {
     "pair": {
+        "password": "Password",
         "save": "Save",
-        "saving": "Saving"
+        "saving": "Saving",
+        "failed": "Something went wrong, did you enter the correct username and password?",
+        "noemail": "Enter an email address",
+        "nopassword": "Enter a password"
     }
 }
