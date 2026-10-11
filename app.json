@@ -67,7 +67,8 @@
       "class": "camera",
       "capabilities": [
         "onoff",
-        "refresh"
+        "refresh",
+        "measure_signal_strength"
       ],
       "platforms": [
         "local"
@@ -117,7 +118,8 @@
       "class": "camera",
       "capabilities": [
         "onoff",
-        "refresh"
+        "refresh",
+        "measure_signal_strength"
       ],
       "platforms": [
         "local"

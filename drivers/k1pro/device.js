@@ -16,6 +16,9 @@ module.exports = class MyDevice extends Homey.Device {
     if (!this.hasCapability('refresh')) {
       await this.addCapability('refresh');
     }
+    if (!this.hasCapability('measure_signal_strength')) {
+      await this.addCapability('measure_signal_strength');
+    }
     this._snapshot = await this.homey.images.createImage();
     await this.setSnapshot();
     //this.homey.setInterval(() => this.setSnapshot(), 10 * 60 * 1000);
@@ -107,11 +110,12 @@ async onDeleted() {
 }
 
 getPollAttributes() {
-  return ['CameraOnOff', 'OnlineStatus', 'MotionDetectSW', 'LedOnOff'];
+  return ['CameraOnOff', 'OnlineStatus', 'RSSI', 'MotionDetectSW', 'LedOnOff'];
 }
 
 onOsaioPush({ data }) {
   if ('CameraOnOff' in data) this.setCapabilityValue('onoff', !!data.CameraOnOff).catch(this.error);
+  if ('RSSI' in data) this.setCapabilityValue('measure_signal_strength', data.RSSI).catch(this.error);
   if ('OnlineStatus' in data) {
     data.OnlineStatus ? this.setAvailable().catch(this.error)
                       : this.setUnavailable('Camera is offline. Make sure it\'s powered up and connected to the internet.').catch(this.error);

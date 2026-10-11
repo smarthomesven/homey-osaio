@@ -3,6 +3,7 @@
 const Homey = require('homey');
 const WebSocket = require('ws');
 const axios = require('axios');
+const HomeyPush = require('./lib/push');
 
 const WS_URL = 'wss://ali-wss-eu.osaio.net/ws';
 const APPID = '3dab98eee85b7ae8';
@@ -281,6 +282,8 @@ class OsaioConnection {
 class OsaioApp extends Homey.App {
   async onInit() {
     this.log('OSAIO app starting');
+    this.push = new HomeyPush(this);
+    await this.push.startPush();
     this._wsUrl = this.homey.settings.get('wsURL') || 'wss://ali-wss-eu.osaio.net/ws';
     this.connection = new OsaioConnection(this);
     await this.connection.start();
@@ -306,6 +309,9 @@ class OsaioApp extends Homey.App {
 
   async onUninit() {
     await this.connection.stop();
+    if (this.push) {
+      this.push.stopPush();
+    }
   }
 
   async getAuthHeaders() {
