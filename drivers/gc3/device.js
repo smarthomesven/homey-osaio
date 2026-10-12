@@ -17,7 +17,7 @@ module.exports = class MyDevice extends Homey.Device {
       await this.addCapability('refresh');
     }
     if (!this.hasCapability('measure_signal_strength')) {
-      await this.addCapability('measure_signal_stength');
+      await this.addCapability('measure_signal_strength');
     }
     this._snapshot = await this.homey.images.createImage();
     await this.setSnapshot();
