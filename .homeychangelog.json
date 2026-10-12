@@ -43,5 +43,8 @@
   },
   "1.1.7": {
     "en": "Added signal strength to all cams"
+  },
+  "1.1.8": {
+    "en": "Fixed typo"
   }
 }
