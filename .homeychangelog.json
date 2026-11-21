@@ -46,5 +46,8 @@
   },
   "1.1.8": {
     "en": "Fixed typo"
+  },
+  "1.1.9": {
+    "en": "Update dependencies"
   }
 }
